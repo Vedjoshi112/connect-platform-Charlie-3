@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard | Engi-Connect</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .dashboard {
+      padding: 20px;
+    }
+    .dashboard-header {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .profile-pic {
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: #c00;
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .quick-stats {
+      display: flex; gap: 20px; margin-top: 10px;
+    }
+    .stat-box {
+      background: #eee; padding: 10px 20px; border-radius: 8px;
+      text-align: center; flex: 1;
+    }
+    .active-projects, .available-opportunities, .profile-summary {
+      background: white; border-radius: 10px; padding: 20px; margin-bottom: 20px;
+    }
+    .project-card, .opportunity-card {
+      border: 1px solid #ccc; border-radius: 10px;
+      padding: 15px; margin-bottom: 15px;
+      background: #fafafa;
+    }
+    .skills { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag {
+      background: #c00; color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.8em;
+    }
+    .btn {
+      background: #000; color: white; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer;
+    }
+    .btn:hover { background: #c00; }
+  </style>
+</head>
+<body>
+  <!-- Sidebar + Navbar -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <div class="sidebar">
+    <a href="#">Account</a>
+    <a href="#">Active Projects</a>
+    <a href="#">Opportunities</a>
+    <a href="#">Support</a>
+  </div>
+  <label for="menu-toggle" class="overlay"></label>
+
+  <nav>
+    <div class="navbar">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <div class="site-name">Engi-Connect</div>
+    </div>
+  </nav>
+
+  <!-- Main Dashboard -->
+  <div class="dashboard">
+    <div class="dashboard-header">
+      <h2>Welcome, <span style="color:#c00;">Charlie</span></h2>
+      <div class="profile-pic">C3</div>
+      <div class="quick-stats">
+        <div class="stat-box"><h3>4</h3><p>Projects Applied</p></div>
+        <div class="stat-box"><h3>2</h3><p>Active Projects</p></div>
+        <div class="stat-box"><h3>3</h3><p>Completed</p></div>
+      </div>
+    </div>
+
+    <div class="active-projects">
+      <h3>Active Projects</h3>
+      <div class="project-card">
+        <h4>UI Redesign</h4>
+        <p>Company: Designify</p>
+        <progress value="70" max="100"></progress>
+        <p>Deadline: 4 days remaining</p>
+        <button class="btn">View Details</button>
+      </div>
+      <div class="project-card">
+        <h4>API Development</h4>
+        <p>Company: TechVerse</p>
+        <progress value="40" max="100"></progress>
+        <p>Deadline: 10 days remaining</p>
+        <button class="btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="available-opportunities">
+      <h3>Available Opportunities</h3>
+      <div class="opportunity-card">
+        <h4>Frontend Intern</h4>
+        <p>Company: Google</p>
+        <p>Build interactive UI components for client web apps.</p>
+        <div class="skills">
+          <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Python</span>
+        </div>
+        <p>Duration: 8 weeks</p>
+        <button class="btn">Apply Now</button>
+      </div>
+      <div class="opportunity-card">
+        <h4>Data Analyst Intern</h4>
+        <p>Company: Microsoft</p>
+        <p>Analyze data for predictive Machine Learning modeling.</p>
+        <div class="skills">
+          <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Power BI</span>
+        </div>
+        <p>Duration: 12 weeks</p>
+        <button class="btn">Apply Now</button>
+      </div>
+    </div>
+
+    <div class="profile-summary">
+      <h3>Profile Summary</h3>
+      <p><strong>Name:</strong>Charlie</p>
+      <p><strong>Major:</strong> Computer Science</p>
+      <h4>Skills</h4>
+      <div class="skills">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">React</span>
+      </div>
+      <h4>Portfolio</h4>
+      <a href="#" class="btn">GitHub</a>
+      <a href="#" class="btn">LinkedIn</a>
+      <a href="#" class="btn">LeetCode</a>
+      <a href="#" class="btn">HackerRank</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Copyright © 2025 Engi-Connect</p>
+    <a href="#">Terms</a> | <a href="#">Privacy</a>
+  </footer>
+</body>
+</html>
